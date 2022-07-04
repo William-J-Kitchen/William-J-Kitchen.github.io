@@ -30,14 +30,14 @@ body {
 /***** NAVBAR STYLING *****/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: #05031f; /* This colors the navbar royal blue */
+    background-color: #FFFFFF; /* This colors the navbar royal blue */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
     animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
-    border-bottom:1px solid rgb(255, 255, 255);
+    border-bottom:0.5px solid #FEFEFE;
 
 }
 
@@ -47,7 +47,7 @@ body {
 .Navbar a {
     float: right; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: rgb(209, 209, 209); /* This is the font color for text on our navbar */
+    color: #404040; /* This is the font color for text on our navbar */
     font-weight: bold;
     text-transform: uppercase; /* Capitalizing all text */
     padding: 25px 20px; /* This adds padding around our text */
@@ -71,7 +71,7 @@ body {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    color: rgb(55, 53, 70); /* This defines the font color that will display when navbar a elements are hovered over */
+    color: #05031f; /* This defines the font color that will display when navbar a elements are hovered over */
 }
 
 /* Navbar home button */
