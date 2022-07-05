@@ -113,14 +113,15 @@ h5 {
 /***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
-} 
+}
 
 .Column_1 {
     float: left;
     width: 50%;
     padding: 10px;
     padding-top: 3%;
-    height: 800px;
+
+    overflow: hidden;
 }
 
 .Column_2 {
@@ -164,7 +165,7 @@ img {
     /*filter: grayscale(75%); *//* This rids our pictures of 75% of their color */
     border-radius: 8px; /* Gives all images slightly rounded corners */
     max-width: 100%; /* Ensures all images stay within the width of their container */
-    height: 80%; /*600px;*/ /* Sets the height of all images */
+    /*height: 600px;*/ /* Sets the height of all images */
     width: 80%;
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
