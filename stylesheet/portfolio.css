@@ -129,7 +129,7 @@ h5 {
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 5px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-    height: 800px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+    max-height: 800px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
