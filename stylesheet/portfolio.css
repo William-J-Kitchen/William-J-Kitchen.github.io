@@ -120,6 +120,7 @@ h5 {
     width: 50%;
     padding: 10px;
     padding-top: 3%;
+    padding-left: 10%;
 
     overflow: hidden;
 }
@@ -164,7 +165,7 @@ h5 {
 img {
     /*filter: grayscale(75%); *//* This rids our pictures of 75% of their color */
     border-radius: 8px; /* Gives all images slightly rounded corners */
-    max-width: 100%; /* Ensures all images stay within the width of their container */
+    max-width: 600px; /* Ensures all images stay within the width of their container */
     /*height: 600px;*/ /* Sets the height of all images */
     max-height: 600px;
     width: 80%;
