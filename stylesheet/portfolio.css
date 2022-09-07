@@ -16,7 +16,6 @@ a:active {
     color:yellow;
 }
 
-
 /* Body */
 body {
     font-size: 30px;
@@ -44,20 +43,22 @@ body {
 
 /* Navbar links */
 .Navbar a {
+    /*margin: 1.5% 0px 0px 1.5%;*/
     float: right; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: #404040; /* This is the font color for text on our navbar */
-    font-weight: bold;
-    text-transform: uppercase; /* Capitalizing all text */
-    padding: 25px 20px; /* This adds padding around our text */
+    color: #888888; /* This is the font color for text on our navbar */
+    font-weight: absolute;
+    text-transform: Capitalize; /* Capitalizing all text */
+    padding: 1% 1%; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: Icons, Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-    font-size: 34px; /* This specifies the font size for text on our navbar */
+    font-family: 'Open Sans', sans-serif; /*src: local('./fonts/Futura.ttc'); /* This specifies the font family for text on our navbar Old fonts: Icons, Avant Garde, Helvetica;*/
+    font-size: 24px; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within its container */
     /*position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
     animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
-
+    margin: .4% 0% 0% 0%;
+    position: relative;
 }
 
 /* Screens 576px and smaller will display navbar links equally distributed */
@@ -68,14 +69,25 @@ body {
     }
 }
 
+
 /* Navbar hover effects */
 .Navbar a:hover {
-    color: #2669de; /* This defines the font color that will display when navbar a elements are hovered over */
+    color: #F7941D; 
+    border-bottom: 5px solid #F7941D;
 }
+
+
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    color: #FFFFFF;
+    color: #F7941D;
+    border-bottom: 5px solid #F7941D;
+    
+}
+
+.Navbar a.active-link {
+    color: #F7941D;
+    border-bottom: 5px solid #F7941D;
 }
 
 /***** END OF NAVBAR STYLING *****/
@@ -181,7 +193,13 @@ img {
 	/*transform: scale(1.1);*/ /* Image is increased slightly when hovered over */
 /*}*/
 
-
+.logo {
+    width: 93px;
+    height: 46px;
+    float: left;
+    margin: .8% 0% .8% .8%;
+    border-radius: 0px;
+}
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
