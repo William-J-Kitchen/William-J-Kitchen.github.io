@@ -1,15 +1,15 @@
-* {box-sizing:border-box}
+/** {box-sizing:border-box}*/
 
 a:link {
     color: darkgrey;
 }
 
 a:visited {
-    color: purple;
+    color: darkgrey;
 }
 
 a:hover {
-    color:red;
+    color:#F7941D;
 }
 
 a:active {
@@ -17,8 +17,7 @@ a:active {
 }
 
 /* Body */
-body {
-    font-size: 30px;
+body {  
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
 }
 
@@ -28,8 +27,9 @@ body {
 
 /***** NAVBAR STYLING *****/
 .Navbar {
+    float: right;
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: #FFFFFF; /* This colors the navbar royal blue */
+    background-color: #FFFFFF; /* This colors the navbar*/
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -39,44 +39,38 @@ body {
     border-bottom: 1px solid #DEDEDE;
 }
 
-
-
-/* Navbar links */
-.Navbar a {
+/* Navbar links Navbar*/
+.nav {
     /*margin: 1.5% 0px 0px 1.5%;*/
-    float: right; /* This specifies that the text floats on the left on the navbar */
-    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    float: right; /* This specifies that the text floats on the right on the navbar */
     color: #888888; /* This is the font color for text on our navbar */
     font-weight: absolute;
-    text-transform: Capitalize; /* Capitalizing all text */
-    padding: 1% 1%; /* This adds padding around our text */
+    padding: .5% 0%; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
     font-family: 'Open Sans', sans-serif; /*src: local('./fonts/Futura.ttc'); /* This specifies the font family for text on our navbar Old fonts: Icons, Avant Garde, Helvetica;*/
-    font-size: 24px; /* This specifies the font size for text on our navbar */
-    text-align: center; /* This centers the text within its container */
+    font-size: 1.8rem; /* This specifies the font size for text on our navbar */
+    text-align: right;
     /*position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
     animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
-    margin: .4% 0% 0% 0%;
+    margin: .0% 0% 0% 0%;
     position: relative;
+    vertical-align: middle;
 }
 
 /* Screens 576px and smaller will display navbar links equally distributed */
 @media screen and (max-width: 576px) {
     .Navbar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
+        width: 12%; /* This makes each link take up 1/6 of the navbar */
+        /*font-size: 3.8em;*/
     }
 }
-
 
 /* Navbar hover effects */
 .Navbar a:hover {
     color: #F7941D; 
     border-bottom: 5px solid #F7941D;
 }
-
-
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
@@ -90,59 +84,129 @@ body {
     border-bottom: 5px solid #F7941D;
 }
 
+.logo {
+    width: 93px;
+    height: 46px;
+    float: left;
+    margin: .8% 0% .8% .8%;
+    border-radius: 0px;
+}
+
 /***** END OF NAVBAR STYLING *****/
 
+/*$display-font-sizes {
+  1: 5rem,
+  2: 12rem,
+  3: 12rem,
+  4: 12rem,
+  5: 12rem,
+  6: 12rem;
+}*/
+
+/*$display-font-family: null;
+$display-font-style:  null;
+$display-font-weight: 300;
+$display-line-height: $headings-line-height;*/
+
+
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: Icons, "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
-    font-size: 66px;
+    font-family: Futura, Icons, "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+    font-size: calc(1.525rem + 1.3vw);
     text-align: left;
-    font-style: italic;
     margin-left: 3%;
     margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #404040;  
+    color: #F7941D;  
 }
 
 h3 {
-    text-transform: uppercase;
-    font-family: Icons, "Trebuchet MS", Optima;
-    font-size: 42px;
+    /*text-transform: uppercase;*/
+    font-family: Futura, Icons, "Trebuchet MS", Optima;
+    font-size: calc(1.25rem + 1vw);
     text-align: left;
     margin-left: 3%;
     color: #404040;
-    font-weight: 10;
+    font-weight: bold;
 }
+
+
 
 h5 {
-    font-family: Icons, "Trebuchet MS", Optima;
-    font-size: 32px;
+    font-family: Futura, Icons, "Trebuchet MS", Optima;
+    font-size: calc(1rem + .8vw);
     text-align: left;
     margin-left: 3%;
     color: #404040;
     font-weight: 10;
 }
 
-/***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
-* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
-    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+.Centered {
+    margin-top: 0%;
+}
+
+.Accent {
+    text-transform: uppercase;
+    color: #F7941D;
+    font-weight: 10;
+}
+
+.Table_Block {
+    display: table; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
 }
 
 .Column_1 {
-    float: left;
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    vertical-align: middle;
+    /*float: left;
     width: 50%;
-    padding: 10px;
-    padding-top: 3%;
+    /*padding: 10px;
+    padding-top: 3%;*/
     padding-left: 10%;
-
     overflow: hidden;
+
 }
 
 .Column_2 {
-    float: left;
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    /*float: right;
     width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 5px;
+    /*padding: 5px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-    max-height: 800px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+    max-height: 800px; /* This sets the height of the column */
+    overflow: hidden;
+}
+
+.About_Block {
+    display: table; /* Make the container element behave like a table */
+    z-index: 0;
+}
+
+.About_Col1 {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    width: 40%;
+    /*float: left;
+    padding-top: 0%;
+    padding-left: -10%;*/
+    background-color: #F7F7F7;
+    z-index: 0;
+    /*min-height: 100vh;*/
+}
+
+.About_Col2 {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    width: 60%;
+    vertical-align: middle;
+    /*float: left;
+    padding-top: 5%;*/
+    background-color: #F7F7F7;
+    z-index: 1;
+    /*min-height: 100vh;*/
+}
+
+.Hero {
+    max-height: 75vh;
+    z-index: 0;
+    margin-top: 0%;
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
@@ -155,12 +219,12 @@ h5 {
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
     padding-top: 3.5%;
-    height: 450px;
+    height: 75vh;
 }
 
 .Row {
     display: block;
-    border-bottom: 1px solid #DEDEDE;
+
     color: #404040;
     font-size: 30px;
 }
@@ -175,16 +239,37 @@ h5 {
 
 /* Image elements */
 img {
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+
+}
+
+
+
+.Portrait {
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
     /*filter: grayscale(75%); *//* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* Gives all images slightly rounded corners */
     max-width: 600px; /* Ensures all images stay within the width of their container */
     /*height: 600px;*/ /* Sets the height of all images */
     max-height: 600px;
+    border-radius: 8%; /* Gives all images slightly rounded corners */
     width: 80%;
-    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    margin-top: 10%;
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
     margin-right: auto;
 }
+
+.ProjectImage {
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    /*filter: grayscale(75%); *//* This rids our pictures of 75% of their color */
+    max-width: 600px; /* Ensures all images stay within the width of their container */
+    /*height: 600px;*/ /* Sets the height of all images */
+    max-height: 600px;
+    border-radius: 8%; /* Gives all images slightly rounded corners */
+    width: 80%;
+    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+    margin-right: auto;
+}
+
 
 /* Image element hover effects */
 /*img:hover {
@@ -193,13 +278,7 @@ img {
 	/*transform: scale(1.1);*/ /* Image is increased slightly when hovered over */
 /*}*/
 
-.logo {
-    width: 93px;
-    height: 46px;
-    float: left;
-    margin: .8% 0% .8% .8%;
-    border-radius: 0px;
-}
+
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
@@ -210,89 +289,95 @@ img {
     }
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1800px;
-    position: relative;
-    margin: auto;
+
+
+.card-img-top {
+    max-width: 85%;
+    padding: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%!important; /* Gives all images slightly rounded corners */
 }
 
-/* .mySlides {
-    overflow: hidden;
-  } */
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.Git_Block {
+    display: table; /* Make the container element behave like a table */
+    z-index: 0;
+    width:100%;
 }
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.Git_Col1 {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    width: 60%;
+    /*float: left;
+    padding-top: 0%;
+    padding-left: -10%;*/
+    background-color: #F7F7F7;
+    z-index: 0;
+    /*min-height: 100vh;*/
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    color: rgba(64,64,64,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
+.Git_Col2 {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    width: 40%;
+    vertical-align: middle;
+    /*float: left;
+    padding-top: 5%;*/
+    background-color: #F7F7F7;
+    z-index: 1;
+    /*min-height: 100vh;*/
+}
 
-    .active, .dot:hover {
-        background-color: #2669DE;
-    }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
+.Git_Col3 {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+    width: 40%;
+    vertical-align: middle;
+    /*float: left;
+    padding-top: 5%;*/
+    background-color: #F7F7F7;
+    z-index: 1;
+    /*min-height: 100vh;*/
+}
+
+.scaled {
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8%;
+}
 
 .label {
     font-family: Icons, 'Trebuchet MS', Optima;
     font-size: 30px;
     margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+    text-align:left;
+}
+
+.container .centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.container .btn {
+    background-color: white;
+    color: F7941D;
+    border: 2px solid #F7941D;
+    color: #F7941D;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-family: Futura, Icons, "Trebuchet MS", Optima;
+    font-size: calc(1rem + .8vw);
+}
+
+.imagelink {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56px;
+    max-height: 56px;
 }
   
   @keyframes fade {
