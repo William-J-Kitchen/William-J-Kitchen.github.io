@@ -398,6 +398,11 @@ img {
     font-size: calc(1rem + .8vw);
 }
 
+.button:hover {
+    border: 2px solid #F7941D!important;
+    color: #F7941D!important;
+}
+
 .imagelink {
     display: block;
     margin-left: auto;
